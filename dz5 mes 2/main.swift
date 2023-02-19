@@ -13,7 +13,7 @@ import Foundation
 //
 //Создать структуру User c параметрами имя, фамилия, номер телефона. Создать enum из стран с кодами телефонов. Добавить параметр code в  структуру User. Создать класс DataBase с параметром массив юзеров и функций распечатки информации всех юзеров, функий распечатки только по определенной стране. В main cделать так, чтобы пользователь вводил все данные через ридлайн. Введенные данные должны записаться в массив в классе DataBase. Для телефона сделать 2 ридлайна, один для указывания страны по названию, другой для ввода номера. В общей информации номер телефона должен распечатываться в таком виде: “+996777777777”. Запрос для ввода данных сделать несколько раз циклом, чтобы можно было ввести разные данные.
 
-//var database = DataBase()
+var database = DataBase()
 
 print("Введите имя:")
 var name:String = readLine()!
@@ -27,6 +27,15 @@ var telNumber: String = readLine()!
 var country: String = readLine()!
 
 var chosedCode: String = ""
+
+var name1 = User(name: "Deni", lastName: "Devito", telNumber: "5735738",code: Code(rawValue: "971") ?? <#default value#>!
+
+//                 var name2 = User(name: "Sofi", lastName: "Loren", telNumber: "688999",code: Code (rawValue: "+7") ?? <#default value#>)
+                 var name2 = User(name: "Sofi", lastName: "Loren", telNumber: "36225",code: Code(rawValue: "+7") ?? <#default value#>)
+                 var name3 = User(name: "Alan", lastName: "Daguev", telNumber: "575788", code: Code(rawValue: "+771") ?? <#default value#>)
+                 var name4 = User(name: "Franco", lastName: "Derey", telNumber: "980696", code: Code(rawValue: "+988") ?? <#default value#>)
+
+var users: [User] = [name1,name2,name3,name4]
 
 
 
@@ -43,7 +52,7 @@ default:
     ()
 }
 
-var user = User(name: name, lastName: lastName, telNumber: "\(chosedCode)\(telNumber)", code: code)
+
 
 database.users.append(user)
 
