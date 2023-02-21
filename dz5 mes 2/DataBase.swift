@@ -12,16 +12,20 @@ import Foundation
 class DataBase {
     var users: [User] = []
     
-    init(users: [User]) {
-        self.users = users
+    func printUsers(user:User) {
+        users.append(user)
     }
-    func usersInfo(users: String) {
-        print("Все пользователи \(usersInfo) в списке")
+    
+    func usersAllInfo() {
+        for i in users {
+            print(" \(i.name) \(i.lastName) \(i.code.rawValue) \(i.telNumber)")
+        }
     }
-    func userInfoOne(code: Code) {
+    
+    func userByCountry(code: Code) {
         for user in users {
             if user.code == code {
-                print(user.name)
+                print(" \(user.name) \(user.lastName) \(user.code.rawValue) \(user.telNumber)")
             }
         }
     }
